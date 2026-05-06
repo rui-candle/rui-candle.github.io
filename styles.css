@@ -1,0 +1,131 @@
+/* Base Styles & Aesthetics */
+:root {
+    --bg-color: #f7f5f2;
+    /* Soft, warm off-white */
+    --text-dark: #2c2a29;
+    /* Soft black for contrast */
+    --text-light: #6e6a67;
+    --card-bg: #ffffff;
+    --card-shadow: rgba(0, 0, 0, 0.1);
+    --card-shadow-hover: rgba(0, 0, 0, 0.18);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-dark);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* Header/Hero Section */
+.hero {
+    font-family: "Rancho", sans-serif;
+    align-items: flex-start;
+    text-align: left;
+    padding: 1rem 2rem 2rem;
+}
+.hero img{
+    height: 100px;
+    min-height: 100px;
+    justify-content: left;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    letter-spacing: -1px;
+    margin-bottom: 0.5rem;
+    color: var(--text-dark);
+}
+
+.hero p {
+    font-size: 2rem;
+    font-weight: 300;
+    color: var(--text-light);
+}
+
+/* Product Grid Layout */
+.gallery-container {
+    width: 100%;
+    max-width: 1200px;
+    padding: 2rem;
+}
+
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    /* This ensures cards wrap to the next line when exceeding view */
+    justify-content: flex-start;
+    /* Aligns cards to the left */
+    gap: 2rem;
+    /* Spacing between cards */
+}
+
+/* Polaroid Style Product Card */
+.polaroid-card {
+    background-color: var(--card-bg);
+    padding: 5px 5px 40px 5px;
+    /* Polaroid proportion: equal top/sides, larger bottom */
+    box-shadow: 0 4px 15px var(--card-shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5%;
+    /* Very slight rounding for premium feel */
+}
+
+.polaroid-card:hover {
+    transform: translateY(-5px) rotate(1deg);
+    /* Subtle playful interaction */
+    box-shadow: 0 8px 25px var(--card-shadow-hover);
+}
+
+/* Normalized Image */
+.product-image {
+    height: 250px;
+    /* Fixed height as requested */
+    width: auto;
+    /* Width proportional to original ratio */
+    max-width: 100%;
+    /* Ensure it doesn't overflow container */
+    object-fit: cover;
+    /* Cover ensures it looks good if there are weird aspect ratios, but since width is auto, contain or raw is fine too */
+    background-color: #f0f0f0;
+    /* Placeholder color while loading */
+    margin-bottom: 15px;
+    border-radius: 5%;
+}
+
+/* Text Formatting */
+.product-info {
+    text-align: center;
+    width: 0;
+    min-width: 100%;
+}
+
+.item-name {
+    font-weight: 700;
+    /* Bold font as requested */
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+    color: var(--text-dark);
+}
+
+.item-description {
+    font-weight: 300;
+    /* Light font as requested */
+    font-size: 0.9rem;
+    color: var(--text-light);
+    line-height: 1.4;
+}
