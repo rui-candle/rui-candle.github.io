@@ -30,7 +30,7 @@ function renderProducts(products) {
         // Create the image element
         const img = document.createElement("img");
         img.className = "product-image";
-        img.src = item.picture_directory;
+        img.src = "products/&{item.picture_directory}";
         img.alt = item.item_name;
         
         // Add error handling for images
