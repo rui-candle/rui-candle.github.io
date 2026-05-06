@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rui - Artisan Candle</title>
+    <!-- Modern Google Font: Outfit -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;700&family=Rancho&family=Meie Script&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css?v=2">
+    <!-- PapaParse for easy CSV parsing in the browser -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+</head>
+<body>
+    <header class="hero">
+        <div class="logo-container" id="logo-container">
+                <img src="assets/logotext.png">
+                <p>Artisan Candle</p>
+        </div>
+        <img src="assets/rui-seal.png" alt="Seal" class="seal-img" id="seal-img">
+    </header>
+
+    <div class="content-wrapper">
+        <main class="gallery-container">
+            <!-- Product cards will be dynamically injected here -->
+            <div id="product-grid" class="product-grid"></div>
+        </main>
+        
+        <aside class="side-actions desktop-only">
+            <div class="qr-wrapper">
+                <img src="assets/qr-code.png" alt="QR Code" class="qr-img">
+                <p>Click me to share</p>
+            </div>
+            <a href="https://wa.me/628123253262" target="_blank" class="wa-link" aria-label="Chat on WhatsApp">
+                <img src="assets/whatsapp.png" alt="WhatsApp Icon" class="wa-img">
+                <p>Contact Us</p>
+            </a>
+        </aside>
+    </div>
+
+    <footer class="footer-mobile-qr">
+      <!--  <img src="assets/rui-seal.png" alt="Seal" class="seal-img"> *-->
+        <div class="qr-wrapper">
+            <img src="assets/qr-code.png" alt="QR Code" class="qr-img">
+            <p>Click me to share</p>
+        </div>
+        <a href="https://wa.me/628123253262" target="_blank" class="wa-link" aria-label="Chat on WhatsApp">
+            <img src="assets/whatsapp.png" alt="WhatsApp Icon" class="wa-img">
+            <p>Contact Us</p>
+        </a>
+    </footer>
+
+    <footer class="site-footer">
+        <p>&copy; 2026 Rui Artisan Candle. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
