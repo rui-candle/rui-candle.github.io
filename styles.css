@@ -343,7 +343,7 @@ body {
     height: 250px;
     /* Fixed height as requested */
     width: auto;
-    min-width: 100px;
+    min-width: 200px;
     /* Width proportional to original ratio */
     max-width: 100%;
     /* Ensure it doesn't overflow container */
