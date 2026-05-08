@@ -56,7 +56,7 @@ function renderProducts(products) {
         const img = document.createElement("img");
         img.className = "product-image";
         img.src = `products/small/${item.picture_directory}`;
-        img.alt = item.item_name;
+        img.alt = item.picture_directory;
         
         img.onerror = function() {
             this.src = "https://via.placeholder.com/150x150?text=Image+Not+Found";
