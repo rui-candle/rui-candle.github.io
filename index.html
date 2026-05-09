@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rui - Artisan Candle</title>
+    <!-- Modern Google Font: Outfit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;700&family=Rancho&family=Poppins:wght@700&Cormorant+Garamond:wght@300;400;500&family=Noto+Serif+SC:wght@300;400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css?v=4">
+    <!-- PapaParse for easy CSV parsing in the browser -->
+    <!-- Obsolete <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>-->
+</head>
+
+<body>
+    <header class="hero">
+        <div class="hero-inner">
+            <div class="logo-container" id="logo-container">
+                <img src="assets/rui_logo.png">
+                <p>Artisan Candle</p>
+            </div>
+
+            <div class="header-narration">
+                Rui [瑞] is an ancient symbol of auspicious grace — a blessed omen sent from heaven, carrying wishes of peace,
+                harmony, and quiet prosperity.
+            
+                Inspired by this meaning, we handcraft each candle with the hope that its gentle flame becomes more than light
+                alone.
+            
+                May every candle bring warmth to your home, calm to your heart, and a touch of Rui into the moments you cherish
+                most.
+            </div>
+
+            <img src="assets/rui_seal.png" alt="Seal" class="seal-img" id="seal-img">
+        </div>
+    </header>
+
+    <div class="mobile-narration">
+        Rui [瑞] is an ancient symbol of auspicious grace — a blessed omen sent from heaven, carrying wishes of peace,
+        harmony, and quiet prosperity.
+    
+        Inspired by this meaning, we handcraft each candle with the hope that its gentle flame becomes more than light
+        alone.
+    
+        May every candle bring warmth to your home, calm to your heart, and a touch of Rui into the moments you cherish
+        most.
+    </div>
+
+    <!-- ✅ New full-width container wrapping gallery + side actions -->
+    <div class="main-wrapper">
+        <main class="gallery-container">
+            <div id="product-grid" class="product-grid"></div>
+        </main>
+
+        <aside class="side-actions desktop-only">
+            <div class="qr-wrapper">
+                <img src="assets/qr_link.png" alt="QR Code" class="qr-img">
+                <p>Click to share</p>
+            </div>
+            <a href="https://wa.me/628123253262" target="_blank" class="wa-link" aria-label="Chat on WhatsApp">
+                <img src="assets/wa_link.png" alt="WhatsApp Icon" class="wa-img">
+                
+            </a>
+        </aside>
+    </div>
+
+    <footer class="footer-mobile-qr">
+        <div class="qr-wrapper">
+            <img src="assets/qr_link.png" alt="QR Code" class="qr-img">
+            <p>Click to share</p>
+        </div>
+        <a href="https://wa.me/628123253262?text=Hallo%20Rui%20Artisan%20Candle%2C%20saya%20ingin%20mendapatkan%20info%20produk." target="_blank" class="wa-link" aria-label="Chat on WhatsApp">
+            <img src="assets/wa_link.png" alt="WhatsApp Icon" class="wa-img">
+            
+        </a>
+    </footer>
+
+    <footer class="site-footer">
+        <p>&copy; 2026 Rui Artisan Candle. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

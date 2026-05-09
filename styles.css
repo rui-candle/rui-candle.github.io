@@ -1,0 +1,504 @@
+/* Base Styles & Aesthetics */
+:root {
+    --bg-color: #f7f5f2;
+    /* Soft, warm off-white */
+    --text-dark: #2c2a29;
+    /* Soft black for contrast */
+    --text-light: #6e6a67;
+    --card-bg: #ffffff;
+    --card-shadow: rgba(0, 0, 0, 0.1);
+    --card-shadow-hover: rgba(0, 0, 0, 0.18);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-dark);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;       /* ✅ was flex-start, allows children to fill width */
+}
+
+/* Hero — restore original, add max-width to align with main-wrapper */
+.hero {
+    display: flex;
+    width: 100%;
+    height: 150px;
+    max-height: 180px;
+    justify-content: center;
+    align-items: center;    
+    margin-top:24px;
+}
+
+/* ✅ New full-width container replacing content-wrapper */
+.hero-inner {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+    width: 100%;
+    max-width: 1200px;
+    padding: 1.5rem 2rem;
+    box-sizing: border-box;
+    font-family: "Rancho", sans-serif;
+    row-gap: 2.00rem;
+    gap: 20px;
+}
+
+/* ✅ was .hero .seal-img — now needs to reach inside .hero-inner */
+.hero-inner .seal-img {
+    height: 100px;
+    width: auto;
+    object-fit: contain;
+}
+
+.hero .logo-container {
+    display: flex;
+    flex-direction: column;
+    height:100px;
+    justify-content: flex-start;
+}
+
+.logo-container img {
+    height: 80%;
+    width: auto;
+}
+
+.logo-container p {
+    font-family: rancho, sans-serif;
+    text-align: center;
+    color: #c84f52 !important;
+    font-size: clamp(16px, 3vw, 24px);
+    /* Scaled to visually match the logo width */
+    white-space: nowrap;
+    letter-spacing: 2px;
+    width: 100%;
+}
+
+.header-narration {
+    
+    padding: 0 30px;
+
+    font-family:
+        "Cormorant Garamond",
+        "Noto Serif SC",
+        serif;
+
+    font-size: 0.85rem;
+
+    line-height: 1.8;
+
+    font-weight: 300;
+
+    color: #6e5d55;
+
+    text-align: center;
+
+    letter-spacing: 0.02em;
+
+    font-style: italic;
+}
+
+.mobile-narration{
+    display:none;
+}
+
+/* QR Wrapper styling (header and base) */
+.qr-wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 150px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.qr-wrapper p {
+    width: 100%;
+    text-align: center;
+    text-align-last: center;
+    font-size: 11px;
+    font-weight: 300;
+    /* light font weight */
+    font-family: 'Outfit', sans-serif;
+    /* sans-serif matching site theme */
+    text-transform: uppercase;
+    color: #000000; /*c84f52;
+    /* matching the theme's red color */
+    margin: 0;
+    line-height: 1;
+}
+
+/* WhatsApp Link Button */
+.wa-link {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 150px;
+    /* match seal and qr wrapper height */
+    text-decoration: none;
+    transition: transform 0.2s ease;
+    margin-left: 1rem;
+    /* spacing between qr and button */
+}
+
+.wa-link:hover {
+    transform: scale(1.05);
+}
+
+.wa-link img.wa-img {
+    height: 85px;
+    /* Leaves 15px for the text to reach 100px total */
+    width: auto;
+    object-fit: contain;
+    mix-blend-mode: multiply;
+    /* Makes white backgrounds perfectly transparent */
+}
+
+.wa-link p {
+    width: 100%;
+    text-align: center;
+    font-size: 11px;
+    font-weight: 300;
+    font-family: 'Outfit', sans-serif;
+    text-transform: uppercase;
+    color: #25D366;
+    /* Official WhatsApp green color */
+    margin: 0;
+    line-height: 1;
+}
+
+/* Make the white background of the QR code transparent */
+.qr-wrapper img.qr-img {
+    height: 100px;
+    /* Leaves 15px for the text to reach 100px total */
+    width: auto;
+    mix-blend-mode: multiply;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.qr-wrapper img.qr-img:hover {
+    transform: scale(1.05);
+}
+
+/* Footer Mobile QR */
+.footer-mobile-qr {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 2rem;
+    width: 100%;
+}
+
+.footer-mobile-qr .seal-img {
+    height: 120px;
+    width: auto;
+}
+
+.footer-mobile-qr .qr-wrapper {
+    height: 120px;
+}
+
+.footer-mobile-qr .wa-link {
+    height: 120px;
+    /* match footer seal and qr wrapper height */
+}
+
+.footer-mobile-qr .wa-link img.wa-img {
+    height: 100px;
+    /* Leaves 20px for the text to reach 120px total */
+}
+
+.footer-mobile-qr .wa-link p {
+    font-size: 13.5px;
+    /* slightly larger for mobile footer */
+}
+
+.footer-mobile-qr .qr-wrapper img.qr-img {
+    height: 100px;
+    /* Leaves 20px for the text to reach 120px total */
+}
+
+.footer-mobile-qr .qr-wrapper p {
+    font-size: 13.5px;
+    /* slightly larger for mobile footer */
+}
+
+/* Universal Site Footer */
+.site-footer {
+    width: 100%;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: auto;
+    /* pushes footer to bottom if content is short */
+    background-color: var(--card-bg);
+    color: var(--text-light);
+    font-size: 0.9rem;
+    font-weight: 300;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.03);
+    /* subtle top shadow */
+}
+
+.site-footer p {
+    margin: 0;
+}
+
+
+
+.hero h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    letter-spacing: -1px;
+    margin-bottom: 0.5rem;
+    color: var(--text-dark);
+}
+
+
+/* Main Content Layout 
+.content-wrapper {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: flex-start;
+}*/
+
+/* ✅ New — replaces .content-wrapper */
+.main-wrapper {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;             /* ✅ centers within stretched body */
+    align-items: flex-start;
+    box-sizing: border-box;
+}
+
+.gallery-container {
+    width: 100%;
+    padding: 2rem;
+    padding-right: 1rem;
+    flex: 1;
+}
+
+
+/* Side actions — right margin matches hero padding-right */
+.side-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    width: 100px;
+    min-width: 100px;            /* ✅ prevents it from shrinking */
+    padding: 2rem 0;
+    margin-right: 2rem;
+    position: sticky;
+    top: 2rem;
+    align-self: flex-start;     /* ✅ prevents stretching to full gallery height */
+}
+
+.side-actions .qr-wrapper,
+.side-actions .wa-link {
+    width: 100px;
+    height: auto;
+    gap: 0.5rem;
+    margin-left: 0;
+    align-items: center;
+}
+
+.side-actions .qr-wrapper img.qr-img,
+.side-actions .wa-link img.wa-img {
+    width: auto;
+    height: 100px;
+    object-fit: contain;
+}
+
+.side-actions .qr-wrapper p,
+.side-actions .wa-link p {
+    font-family: 'Outfit', sans-serif;   /* ✅ Poppins bold */
+    font-weight: 400;
+    font-size: 10px;
+    color: #2c2a29;             /* ✅ black */
+    white-space: nowrap;        /* ✅ no wrapping */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: center;
+    width: 100px;               /* ✅ capped to image width */
+    text-transform: uppercase;
+}
+
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    /* This ensures cards wrap to the next line when exceeding view */
+    justify-content: flex-start;
+    /* Aligns cards to the left */
+    gap: 2rem;
+    /* Spacing between cards */
+}
+
+/* Polaroid Style Product Card */
+.polaroid-card {
+    background-color: var(--card-bg);
+    padding: 5px 5px 40px 5px;
+    /* Polaroid proportion: equal top/sides, larger bottom */
+    box-shadow: 0 4px 15px var(--card-shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5%;
+    /* Very slight rounding for premium feel */
+}
+
+.polaroid-card:hover {
+    transform: translateY(-5px) rotate(1deg);
+    /* Subtle playful interaction */
+    box-shadow: 0 8px 25px var(--card-shadow-hover);
+}
+
+/* Normalized Image */
+.product-image-wrapper {
+    width: 200px;
+    height: 200px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: white;
+    overflow: hidden;
+}
+
+.product-image {
+    max-width: 200px;
+    max-height: 200px;
+
+    height: auto;
+    width: auto;
+    
+    object-fit: contain;
+    object-position: center;
+    
+    border-radius: 5%;
+
+    display: block; 
+}
+
+
+/* Text Formatting */
+.product-info {
+    text-align: center;
+    width: 0;
+    min-width: 100%;
+}
+
+.item-name {
+    font-weight: 700;
+    /* Bold font as requested */
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+    color: var(--text-dark);
+}
+
+.item-description {
+    font-weight: 300;
+    /* Light font as requested */
+    font-size: 0.9rem;
+    color: var(--text-light);
+    line-height: 1.4;
+}
+
+/* Mobile Responsive Adjustments */
+@media (max-width: 768px) {
+
+    /* Center the product cards on mobile */
+    .product-grid {
+        justify-content: center;
+    }
+
+    /* Center the logo container on mobile */
+    .hero {
+        justify-content: center;
+    }
+   
+    .hero-inner {
+        justify-content: space-between;  /* logo left, seal right */
+        align-items: center;             /* ✅ vertically center both */
+    }
+      
+    .hero-inner .seal-img {
+        height: 70px;               /* ✅ was hidden, now visible at mobile size */
+        width: auto;
+        display: block;
+    }
+
+    /* Hide the side actions on mobile */
+    .desktop-only {
+        display: none !important;
+    }
+
+    .header-narration{
+        display: none;
+    }
+
+  .mobile-narration {
+    display: block;
+
+    width: 100%;
+
+    max-width: 700px;
+
+    margin: 0 auto 1rem auto;
+
+    padding: 0 1.5rem;
+
+    box-sizing: border-box;
+
+    text-align: center;
+
+    font-family:
+        "Cormorant Garamond",
+        "Noto Serif SC",
+        serif;
+
+    font-size: 0.72rem;
+
+    line-height: 1.45;
+
+    font-style: italic;
+
+    font-weight: 400;
+
+    color: #6e5d55;
+
+    letter-spacing: 0.01em;
+}
+
+    /* Scale seal on mobile if needed, but it should naturally scale */
+    .hero .seal-img {
+        display: block;
+        /* prevent it from being too huge on tiny screens */
+    }
+
+       /* Scale logo down for mobile */
+    .hero .logo-container {
+        height: 80px;
+    }
+
+    /* Show footer QR on mobile */
+    .footer-mobile-qr {
+        display: flex;
+    }
+}
