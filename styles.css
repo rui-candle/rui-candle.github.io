@@ -554,7 +554,7 @@ body {
 
 /* ── Card Bottom (price + BUY NOW) ──────────────── */
 .card-bottom {
-    display: flex;
+    display: none;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
